@@ -1,104 +1,57 @@
 {
-
   "background": {
-
     "page": "html/background.html"
-
   },
-
   "browser_action": {
-
     "default_icon": "images/icon.png",
-
     "default_popup": "html/background.html"
-
   },
-
-  "content_scripts": [{
-
-    "css": [
-
-      "css/inject.css"
-
-    ],
-
-    "js": [
-
-      "js/lib/jquery.min.js",
-
-      "src/xueshengziping.js"
-
-    ],
-
-    "matches": [
-
-      "http://sql.bjxy.cn/*/student/xszp.aspx"
-
-    ],
-
-    "run_at": "document_end",
-
-    "all_frames": true
-
-  },
-  {
-
-    "css": [
-
-      "css/inject.css"
-
-    ],
-
-    "js": [
-      "js/lib/jquery.min.js",
-      "js/lib/bootbox.min.js",
-      "src/wangshangpingjiao.js"
-    ],
-
-    "matches": [
-
-      "http://sql.bjxy.cn/*/student/wspjdf.aspx*"
-
-    ],
-
-    "run_at": "document_end",
-
-    "all_frames": true
-
-  }],
-
-  "description": "一键评教！拯救你的鼠标！",
-
-  "homepage_url": "http://blog.sharecode.pub/",
-
-  "icons": {
-
-    "16": "images/icon.png",
-
-    "32": "images/icon.png",
-
-    "48": "images/icon.png",
-
-    "128": "images/icon.png"
-
-  },
-
-  "manifest_version": 2,
-
-  "name": "滨江教务助手",
-
-  "permissions": [
-
-    "tabs",
-
-    "notifications",
-
-    "http://sql.bjxy.cn/*"
-
+  "content_scripts": [
+    {
+      "css": [
+        "css/inject.css"
+      ],
+      "js": [
+        "js/lib/jquery.min.js",
+        "src/xueshengziping.js"
+      ],
+      "matches": [
+        "http://sql.bjxy.cn/*/student/xszp.aspx"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "css": [
+        "css/inject.css"
+      ],
+      "js": [
+        "js/lib/jquery.min.js",
+        "js/lib/bootbox.min.js",
+        "src/wangshangpingjiao.js"
+      ],
+      "matches": [
+        "http://sql.bjxy.cn/*/student/wspjdf.aspx*"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
   ],
-
+  "description": "一键评教！拯救你的鼠标！",
+  "homepage_url": "http://blog.sharecode.pub/",
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2,
+  "name": "滨江教务助手",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://sql.bjxy.cn/*"
+  ],
   "update_url": "http://77fz4f.com1.z0.glb.clouddn.com/update.xml",
-
   "version": "1.0"
-
 }
